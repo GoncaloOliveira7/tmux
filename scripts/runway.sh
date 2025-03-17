@@ -8,7 +8,7 @@ if [ $? != 0 ]; then
 	tmux new-session -d -s $SESH -n "editor"
 
 	tmux send-keys -t $SESH:editor "cd ~/work_dir/runway/" C-m
-	tmux send-keys -t $SESH:editor "nvim ." C-m
+	tmux send-keys -t $SESH:editor "nvim" C-m
 	tmux split-window -h
 
 	tmux new-window -t $SESH -n "server"
